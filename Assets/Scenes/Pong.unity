@@ -973,14 +973,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3449566451702856317, guid: 444f68e91ca641249aa6be59129247d4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.40000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3449566451702856317, guid: 444f68e91ca641249aa6be59129247d4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.40000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3449566451702856317, guid: 444f68e91ca641249aa6be59129247d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1133,6 +1125,18 @@ PrefabInstance:
     - target: {fileID: 4299723561140232342, guid: 49db471844f0e0346bd8e5334185fd14, type: 3}
       propertyPath: m_Name
       value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869167263471111687, guid: 49db471844f0e0346bd8e5334185fd14, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869167263471111687, guid: 49db471844f0e0346bd8e5334185fd14, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196854740950968937, guid: 49db471844f0e0346bd8e5334185fd14, type: 3}
+      propertyPath: speed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49db471844f0e0346bd8e5334185fd14, type: 3}
