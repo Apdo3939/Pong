@@ -8,10 +8,14 @@ public class Ball : MonoBehaviour
     public Vector2 direction;
     public float speed;
     public float currentSpeed;
+    public AudioClip onHitWall;
+    public AudioClip onHiPlayer;
+    AudioSource audioSource;
     void Awake()
     {
         currentSpeed = speed;
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
         do
         {
             direction = new Vector2(1, Random.Range(-1.5f, 1.5f));
@@ -30,10 +34,14 @@ public class Ball : MonoBehaviour
         {
             direction.x = direction.x * -1;
             currentSpeed *= 1.3f;
+            audioSource.clip = onHiPlayer;
+            audioSource.Play();
         }
         else
         {
             direction.y *= -1;
+            audioSource.clip = onHitWall;
+            audioSource.Play();
         }
 
     }

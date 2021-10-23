@@ -7,6 +7,14 @@ public class Score : MonoBehaviour
 {
     public int score = 0;
     public Text scoreText;
+    AudioSource audioSource;
+    public AudioClip clip;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = clip;
+    }
     private void OnTriggerEnter2D(Collider2D coll)
     {
         score++;
@@ -17,6 +25,7 @@ public class Score : MonoBehaviour
             ball.direction.x *= -1;
             ball.currentSpeed = ball.speed;
             scoreText.text = "" + score;
+            audioSource.Play();
         }
     }
 }
