@@ -7,8 +7,10 @@ public class Ball : MonoBehaviour
     Rigidbody2D rb;
     public Vector2 direction;
     public float speed;
+    public float currentSpeed;
     void Awake()
     {
+        currentSpeed = speed;
         rb = GetComponent<Rigidbody2D>();
         do
         {
@@ -19,7 +21,7 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + speed * direction * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + currentSpeed * direction * Time.fixedDeltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D coll)
@@ -27,7 +29,7 @@ public class Ball : MonoBehaviour
         if (coll.gameObject.GetComponent<Player>())
         {
             direction.x = direction.x * -1;
-            speed *= 1;
+            currentSpeed *= 1.3f;
         }
         else
         {
